@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>MyCash App</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="logo" class="title is-1">MyCash App</h1>
+    </header>
+
+    <main class="container">
+
+        <section id="balance">
+            <h2 id="balancetitle" class="title is-3">Balanço</h2>
+
+
+            <div class="box">
+                <h3>Entradas</h3>
+                <p id="incomeDisplay"></p>
+            </div>
+
+            <div class="box">
+                <h3>Saídas</h3>
+                <p id="expenseDisplay">R$ 2.000,00</p>
+            </div>
+
+            <div class="box total">
+                <h3>Total</h3>
+                <p id="totalDisplay">R$ 3.000,00</p>
+            </div>
+
+        </section>
+
+
+        <section class="transaction">
+            <h2 id="transactiontitle" class="title is-3">Transações</h2>
+            
+            <a href="#" onclick="Modal.open()" class="button-clean new">+ Nova Transação</a>
+
+            <table id="data-table">
+                <thead id="table-description">
+                    <tr class="box">
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th id="date-title">Data</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+
+                </tbody>
+            </table>
+
+
+        </section>
+
+
+
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="formDiv">
+                <h2 id="modal-title">Nova Transação</h2>
+
+                <form action="" onsubmit="Form.submit(event)" id="form">
+                    <div class="input-group">
+    
+                        <input class="input" type="text" placeholder="Descrição" id="description-input" name="description-input">
+                        <br>
+                        <small>Use o sinal de - (negativo) para despesas e , (virgula) para os decimais</small><br>
+                        <input class="input" type="number" placeholder="R$ 00,00" id="amount-input" name="amount-input">
+                        <br>
+                        <input class="input" type="date" placeholder="Data" id="date-input" name="date-input">
+                        <br>
+                    </div>
+                    <div class="form-buttons">
+                        <br>
+                        <button onclick="Modal.close()" class="button is-danger is-outlined" id="button-cancel">Cancelar</button>
+                        <button class="button is-success is-outlined" id="button-submit">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer></footer>
+
+    <style src></style>
+
+    <script src="./scripts.js"></script>
+
+
+</body>
+
+</html>

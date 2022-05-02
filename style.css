@@ -1,0 +1,253 @@
+@import  './node_modules/bulma/css/bulma.css';
+
+
+/*=========== Global =========== */
+:root {
+    
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+html {
+    font-size: 94%;
+}
+
+body {
+    background: rgb(30,172,61);
+    background: linear-gradient(0deg, rgba(30,172,61,1) 0%, rgba(35,45,36,1) 63%);
+
+    margin-bottom: 0;
+}
+
+#balancetitle, #transactiontitle {
+    color: aliceblue;
+}
+
+
+
+/* ========== Header =========== */
+header {
+    padding: 2rem 2rem 3rem 3rem;
+}
+
+h1#logo {
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+/* ========== Links and Buttons =========== */
+
+a {
+    
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+       
+}
+
+a:hover {
+    color:rgb(48, 211, 83)
+}
+
+.button-clean.new {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.container{
+    width: min(90vw, 800px);
+
+    margin:auto;
+    padding-bottom: 30px;
+}
+
+
+/* ========== Balance =========== */
+section#balance {
+
+    margin: 30px;
+}
+
+div.box {
+    height: 110px;
+    width: 650px;
+
+    margin-left: 45px;
+}
+
+.box h3 {
+    font-size: 20px;
+}
+
+.box p {
+    font-size: 28px;
+    font-weight: bold;
+
+    line-height: 3rem;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+}
+
+.box.total {
+    background-color: green;
+    color: aliceblue;
+}
+
+
+/* ========== Transaction =========== */
+
+section.transaction {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+
+/* ========== Table =========== */
+
+table#data-table {
+    width: 100%;
+    padding-bottom: 10px;
+    
+}
+
+thead#table-description {
+    margin-bottom: 20px;
+   
+    font-size: 20px;
+}
+
+tbody {
+    margin-top: 10px;
+}
+
+tr.box {
+    display: flex;
+    justify-content: space-around;
+
+    margin-left: 0px;
+    height: 60px;
+    width: 800px;
+}
+
+th#date-title {
+    margin-right: 20px;
+}
+
+.box.card-transaction {
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+
+
+table tbody tr:hover {
+    opacity: 0.8;
+}
+
+td.expense {
+    position: relative;
+    left: 4%;
+
+    color: red;
+}
+
+td.income {
+    position: relative;
+    left: 3%;
+
+    color: rgb(61, 196, 21);
+}
+
+/* ========== Modal =========== */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    
+}
+
+.modal {
+    display: block;
+    background: aliceblue;
+    padding: 2.8rem;
+    position: relative;
+
+    border-radius: 10px;
+}
+#modal-title {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+
+form#form {
+    margin-top: 15px;
+    
+}
+
+.input {
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.form-buttons {
+    
+    float: right;
+}
+
+#button-cancel {
+    margin-right: 10px;
+}
+
+
+ /*========== Responsividade =========== */
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 87%;
+    }
+
+    body {
+        max-width: auto;
+        max-height:max-content;
+    }
+
+    
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+
+    body {
+        max-width: auto;
+        max-height: auto;
+    }
+}
+
